@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Judicaël Bessou · Carnet de route solo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6EC;--ink:#1B1B1F;--mute:#5d5a63;--card:#FFFFFF;--line:#1B1B1F;--accent:#FF5A36;--sun:#FFD166;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15141A;--ink:#F5EFE6;--mute:#b7b1bd;--card:#201F27;--line:#F5EFE6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15141A;--ink:#F5EFE6;--mute:#b7b1bd;--card:#201F27;--line:#F5EFE6;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-weight:800;line-height:1.05;margin:0;letter-spacing:-.02em}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:20px}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-weight:500}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--accent)}
+.hero{border:3px solid var(--line);border-radius:20px;overflow:hidden;background:#FF7B54;position:relative;color:#fff}
+.hero svg{display:block;width:100%;height:auto;min-height:260px}
+.hero .txt{position:absolute;left:24px;top:24px;right:24px}
+.kick{font-weight:500;font-size:15px;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,8vw,76px);margin-top:8px;max-width:11em}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:12px 22px;font:800 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn.hot{background:var(--accent);color:#fff}
+section{padding:56px 0 0}
+h2{font-size:clamp(28px,5vw,44px);margin-bottom:22px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:3px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card small{color:var(--accent);font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:13px}
+.card h3{font-size:22px}
+.card p{margin:0;color:var(--mute);font-size:16px}
+.tag{align-self:flex-start;background:var(--sun);color:#1B1B1F;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:800}
+.tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.tile{border:3px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+.tile svg{display:block;width:100%;height:auto}
+.tile div{padding:12px 16px 14px}
+.tile h3{font-size:22px}
+.tile p{margin:2px 0 0;font-size:15px;color:var(--mute)}
+.about{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center;background:var(--sun);color:#1B1B1F;border:3px solid var(--line);border-radius:20px;padding:28px}
+.about p{margin:0 0 12px;font-size:18px}
+.avatar{aspect-ratio:1;border-radius:50%;background:#FF5A36;border:3px solid #1B1B1F;display:grid;place-items:center;font-size:72px;font-weight:800;color:#FFF6EC;max-width:220px;width:100%;justify-self:center}
+.news{background:var(--accent);color:#fff;border:3px solid var(--line);border-radius:20px;padding:30px;text-align:center}
+.news p{margin:8px auto 18px;max-width:30em}
+.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.news input{flex:1 1 220px;max-width:340px;border:3px solid #1B1B1F;border-radius:999px;padding:12px 18px;font:500 16px inherit;font-family:inherit;background:#FFF6EC;color:#1B1B1F}
+.msg{min-height:1.6em;margin-top:12px;font-weight:800}
+footer{padding:48px 0 32px;color:var(--mute);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<div class="logo">Judicaël<span>.</span>voyage</div>
+<ul><li><a href="#articles">Articles</a></li><li><a href="#destinations">Destinations</a></li><li><a href="#apropos">À propos</a></li><li><a href="#newsletter">Newsletter</a></li></ul>
+</nav>
+
+<header class="hero">
+<svg viewBox="0 0 760 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Coucher de soleil sur une route de voyage">
+<rect width="760" height="420" fill="#FF7B54"/>
+<circle cx="610" cy="190" r="70" fill="#FFD166"/>
+<path d="M0 420 L0 290 Q150 220 300 280 T560 270 T760 250 L760 420 Z" fill="#E8505B"/>
+<path d="M0 420 L0 340 Q180 290 360 335 T760 320 L760 420 Z" fill="#B23A48"/>
+<path d="M40 60 Q260 -10 470 80" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="8 10"/>
+<polygon points="462,84 506,64 478,100" fill="#fff"/>
+</svg>
+<div class="txt">
+<div class="kick">Carnet de route · voyageur solo</div>
+<h1>4 pays, 1 sac à dos.</h1>
+<p style="margin:14px 0 18px;max-width:28em;font-size:18px">Dubaï, Chine, USA, Corée : des itinéraires testés, des budgets honnêtes et des histoires vraies.</p>
+<a class="btn" href="#articles">Lire les articles</a>
+</div>
+</header>
+
+<section id="articles">
+<h2>À la une</h2>
+<div class="grid">
+<article class="card"><span class="tag">Bientôt</span><small>Dubaï</small><h3>J’ai passé 3 jours seul à Dubaï : ce que j’ai vraiment dépensé</h3><p>Le budget réel, jour par jour, sans enjoliver.</p></article>
+<article class="card"><span class="tag">Bientôt</span><small>Chine</small><h3>Perdu en Chine sans parler un mot de chinois</h3><p>Les galères, les rencontres, et ce qui m’a sauvé.</p></article>
+<article class="card"><span class="tag">Bientôt</span><small>Corée</small><h3>Séoul en solo : ce que personne ne m’avait dit</h3><p>Mes conseils avant de partir, et mes erreurs.</p></article>
+</div>
+</section>
+
+<section id="destinations">
+<h2>Choisis ta destination</h2>
+<div class="tiles">
+<a class="tile" href="#articles" style="text-decoration:none;color:inherit"><svg viewBox="0 0 178 120" aria-hidden="true"><g transform="translate(-8 -158)"><rect x="8" y="158" width="178" height="120" fill="#F4A259"/><rect x="40" y="214" width="18" height="40" fill="#8A5A2B"/><rect x="60" y="200" width="16" height="54" fill="#8A5A2B"/><rect x="120" y="208" width="18" height="46" fill="#8A5A2B"/><rect x="142" y="224" width="20" height="30" fill="#8A5A2B"/><polygon points="97,172 101,172 108,252 90,252" fill="#5E3A1E"/><rect x="8" y="252" width="178" height="26" fill="#BC6C25"/></g></svg><div><h3>Dubaï</h3><p>Gratte-ciel et désert</p></div></a>
+<a class="tile" href="#articles" style="text-decoration:none;color:inherit"><svg viewBox="0 0 178 120" aria-hidden="true"><g transform="translate(-194 -158)"><rect x="194" y="158" width="178" height="120" fill="#C8372D"/><rect x="282" y="168" width="2" height="12" fill="#F2C14E"/><polygon points="268,190 298,190 290,180 276,180" fill="#F2C14E"/><rect x="276" y="190" width="14" height="12" fill="#7A1F1A"/><polygon points="260,212 306,212 297,202 269,202" fill="#F2C14E"/><rect x="274" y="212" width="18" height="14" fill="#7A1F1A"/><polygon points="255,236 311,236 300,226 266,226" fill="#F2C14E"/><rect x="270" y="236" width="26" height="16" fill="#7A1F1A"/><rect x="194" y="252" width="178" height="26" fill="#8E2A22"/></g></svg><div><h3>Chine</h3><p>Mégalopoles et traditions</p></div></a>
+<a class="tile" href="#articles" style="text-decoration:none;color:inherit"><svg viewBox="0 0 178 120" aria-hidden="true"><g transform="translate(-8 -286)"><rect x="8" y="286" width="178" height="120" fill="#2B4C7E"/><circle cx="30" cy="306" r="2" fill="#FFD166"/><circle cx="90" cy="300" r="2" fill="#FFD166"/><circle cx="160" cy="304" r="2" fill="#FFD166"/><circle cx="120" cy="318" r="2" fill="#FFD166"/><rect x="8" y="370" width="178" height="36" fill="#1D3557"/><rect x="56" y="308" width="6" height="50" fill="#E4572E"/><rect x="132" y="308" width="6" height="50" fill="#E4572E"/><path d="M8 346 Q32 346 59 310 Q97 360 135 310 Q162 346 186 346" fill="none" stroke="#E4572E" stroke-width="2"/><rect x="8" y="352" width="178" height="5" fill="#E4572E"/></g></svg><div><h3>USA</h3><p>Routes sans fin</p></div></a>
+<a class="tile" href="#articles" style="text-decoration:none;color:inherit"><svg viewBox="0 0 178 120" aria-hidden="true"><g transform="translate(-194 -286)"><rect x="194" y="286" width="178" height="120" fill="#2A9D8F"/><circle cx="340" cy="316" r="16" fill="#FFF3B0"/><rect x="244" y="358" width="78" height="26" fill="#E9C46A"/><rect x="270" y="362" width="26" height="22" fill="#264653"/><path d="M226 340 Q250 346 283 324 Q316 346 340 340 Q322 358 283 358 Q244 358 226 340 Z" fill="#264653"/><rect x="194" y="384" width="178" height="22" fill="#1F7A70"/></g></svg><div><h3>Corée</h3><p>Néons et hanoks</p></div></a>
+</div>
+</section>
+
+<section id="apropos">
+<div class="about">
+<div class="avatar" aria-hidden="true">J</div>
+<div>
+<h2 style="margin-bottom:14px">Salut, moi c’est Judicaël !</h2>
+<p>Seul avec mon sac à dos, j’ai traversé les gratte-ciel de Dubaï, les mégalopoles de Chine, les routes américaines et les rues colorées de Corée. Pas de guide, pas de filet : juste de la curiosité et beaucoup d’imprévus.</p>
+<p>Ce blog, c’est mon carnet de route de voyageur solo : des itinéraires testés, des budgets honnêtes et des histoires vraies, pour te prouver qu’on peut partir seul, et que ça change tout.</p>
+<p><strong>Installe-toi, choisis une destination, et voyageons ensemble.</strong></p>
+</div>
+</div>
+</section>
+
+<section id="newsletter">
+<div class="news">
+<h2 style="margin-bottom:6px">Ne rate aucun départ</h2>
+<p>Reçois mes nouveaux récits, budgets et bons plans de voyage solo.</p>
+<form id="nl" novalidate>
+<input id="em" type="email" placeholder="ton@email.com" aria-label="Adresse email" autocomplete="email">
+<button class="btn" type="submit">Je m’abonne</button>
+</form>
+<div class="msg" id="msg" role="status"></div>
+</div>
+</section>
+
+<footer>
+<div>© 2026 Judicaël Bessou · Carnet de route solo</div>
+<div>Instagram · YouTube · Contact</div>
+</footer>
+</div>
+<script>
+document.getElementById('nl').addEventListener('submit',function(e){
+e.preventDefault();
+var v=document.getElementById('em').value.trim(),m=document.getElementById('msg');
+if(v.indexOf('@')<1||v.indexOf('.')<0){m.textContent='Entre une adresse email valide.';return;}
+m.textContent='Merci ! Les inscriptions seront activées au lancement du blog.';
+});
+</script>
+</body>
+</html>
